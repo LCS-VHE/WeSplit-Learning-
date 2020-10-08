@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    let students = ["Vincent", "Bosco", "Luck", "Steven"]
-    @State private var selectedStudent = 0
-
+    @State private var checkout = ""
+    @State private var tipindex = 2
+    @State private var numofpeople = 2
+    
+    var tipoptions = [10,15, 20, 25, 0]
     var body: some View {
-        VStack{
-            Picker("Select Your Student", selection: $selectedStudent){
-                ForEach(0 ..< students.count){ number in
-                    Text(self.students[number])
-                }
+        Form{
+            Section{
+                TextField("Enter Amount: ", text: $checkout).keyboardType(.decimalPad) // Not using the full keyboard
             }
-            Text("Hello \(self.students[self.selectedStudent])")
+            Section{
+                Text("Checkout Amount: \(checkout)")
+            }
         }
-        
     }
 }
 
