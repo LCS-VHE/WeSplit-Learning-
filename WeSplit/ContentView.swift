@@ -13,6 +13,7 @@ struct ContentView: View {
         Form{
             TextField("Enter Your Name", text: $name) // Enter the name, $name reference
             Text("Hello  \(name) ")
+            
         }
     }
 }
