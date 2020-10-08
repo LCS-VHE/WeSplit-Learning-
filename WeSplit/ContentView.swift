@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    let students = ["Vincent", "Bosco", "Luck", "Steven"]
+    @State private var selectedStudent = "Vincent"
+    
     var body: some View {
-        Form{
-            ForEach(0..<100){number in
-                Text("Row \(number) ") // Closures using the for each loop in swiftui
-                
+        
+        Picker("Select Your Student", selection: $selectedStudent){
+            ForEach(0 ..< students.count){ number in
+                Text(self.students[number])
             }
         }
     }
