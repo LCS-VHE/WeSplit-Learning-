@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         Form{
             ForEach(0..<100){number in
-                Text("Row \($0) ") // Closures using the for each loop in swiftui
+                Text("Row \(number) ") // Closures using the for each loop in swiftui
                 
             }
         }
