@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var name = ""
     var body: some View {
         Form{
-            TextField("Enter Your Name", text: $name) // Enter the name, $name reference
-            Text("Hello  \(name) ")
-            
+            ForEach(0..<100){number in
+                Text("Row \($0) ") // Closures using the for each loop in swiftui
+                
+            }
         }
     }
 }
