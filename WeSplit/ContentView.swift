@@ -26,7 +26,7 @@ struct ContentView: View {
                     }
                 }
                 
-                Section(header: Text("How many tip do you want to leave")){ // Better looking header in TextView
+                Section(header: Text("How much tip do you want to leave")){ // Better looking header in TextView
                     Picker("Pick Percent", selection: $tipindex){
                         ForEach(0 ..< tipoptions.count ){ num in
                             Text("Tip: \(self.tipoptions[num]) ") // Convert
