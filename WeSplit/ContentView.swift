@@ -50,9 +50,9 @@ struct ContentView: View {
                 Section{
                     Text("\(totalPerPerson, specifier: "%.2f") $") // A Math Calculation and rounding
                 }
+                .navigationBarTitle("We Split")
             }
         }
-        .navigationBarTitle("We Split")
     }
 }
 
